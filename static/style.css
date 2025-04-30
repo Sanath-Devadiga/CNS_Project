@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    margin: 30px;
+    background: #f4f4f4;
+  }
+  h1 {
+    color: #333;
+  }
+  .section {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px #ccc;
+  }
+  input {
+    padding: 8px;
+    margin: 5px;
+    width: 200px;
+  }
+  button {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  

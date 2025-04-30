@@ -1,8 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from app.group import Group
 from app.member import Member
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 # In-memory stores
 members = {}
@@ -15,7 +19,9 @@ Member.set_key_range(127, 128)
 @app.route("/create_member", methods=["POST"])
 def create_member():
     mem_id = len(members) + 1
-    m = Member(mem_id)
+    name = request.json.get("name", f"Member {mem_id}")
+    m = Member(mem_id, name)
+
     members[mem_id] = m
     return jsonify({"message": f"Member {mem_id} created", "member_id": mem_id})
 
@@ -28,7 +34,9 @@ def create_group():
         return jsonify({"error": "Invalid member ID"}), 400
 
     group_id = len(groups) + 1
-    g = Group(group_id)
+    group_name = data.get("name", f"Group {group_id}")
+    g = Group(group_id, group_name)
+
     g.add_member(members[mem_id])
     groups[group_id] = g
 
@@ -74,5 +82,8 @@ def read_messages():
         ]
     })
 
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+

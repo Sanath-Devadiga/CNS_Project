@@ -14,8 +14,9 @@ class Group:
         cls._l = l
         cls._h = h
 
-    def __init__(self, id):
+    def __init__(self, id, name):
         self.id = id
+        self.name = name
         self.members = {}
         self.secret_keys = []
         self.group_polynomial = None
@@ -23,7 +24,8 @@ class Group:
         self.messages = []
         self.intergroup_messages = []
         self.admin_id = None
-        print(f"\nGroup {self.id} created.")
+        print(f"\nGroup {self.id} ({self.name}) created.")
+
 
     def add_member(self, member):
         if member.group_id is not None:

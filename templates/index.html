@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cryptography Project</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>🔐 Cryptography Project</h1>
+
+  <div class="section">
+    <h2>Create Member</h2>
+    <input id="member-name" placeholder="Enter member name" />
+    <button onclick="createMember()">Create</button>
+  </div>
+
+  <div class="section">
+    <h2>Create Group</h2>
+    <input id="group-name" placeholder="Group name" />
+    <input id="group-admin" placeholder="Admin member ID" />
+    <button onclick="createGroup()">Create</button>
+  </div>
+
+  <div class="section">
+    <h2>Send Message</h2>
+    <input id="sender-id" placeholder="Sender ID" />
+    <input id="target-group" placeholder="Target Group ID" />
+    <input id="message" placeholder="Message text" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <div class="section">
+    <h2>Read Messages</h2>
+    <input id="reader-id" placeholder="Member ID" />
+    <button onclick="readMessages()">Read</button>
+    <div id="messages"></div>
+  </div>
+
+  <script src="/static/scripts.js"></script>
+</body>
+</html>
