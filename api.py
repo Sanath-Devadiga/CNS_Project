@@ -23,7 +23,7 @@ def create_member():
 def create_group():
     data = request.json
     mem_id = data.get("member_id")
-
+    
     if mem_id not in members:
         return jsonify({"error": "Invalid member ID"}), 400
 
