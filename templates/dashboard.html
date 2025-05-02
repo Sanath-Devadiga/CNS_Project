@@ -1,0 +1,51 @@
+<!-- File: templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto App - Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Dashboard</h1>
+    <p id="welcome-message">Welcome!</p>
+
+    <div class="section">
+      <h2>Group Management</h2>
+      <input id="group-name" placeholder="Group Name" />
+      <button onclick="createGroup()">Create Group</button>
+
+      <input id="group-id-add" placeholder="Group ID" />
+      <input id="member-id-add" placeholder="Member ID" />
+      <button onclick="addMemberToGroup()">Add Member</button>
+
+      <input id="group-id-remove" placeholder="Group ID" />
+      <input id="member-id-remove" placeholder="Member ID" />
+      <button onclick="removeMemberFromGroup()">Remove Member</button>
+    </div>
+
+    <div class="section">
+      <h2>Messaging</h2>
+      <input id="message-group-id" placeholder="Group ID" />
+      <input id="message-text" placeholder="Message" />
+      <button onclick="sendMessage()">Send Message</button>
+
+      <button onclick="readMessages()">Read My Messages</button>
+      <ul id="message-list"></ul>
+    </div>
+
+    <div class="section">
+      <h2>View Info</h2>
+      <button onclick="viewMembers()">View Members</button>
+      <button onclick="viewGroups()">View Groups</button>
+      <input id="group-id-view" placeholder="Group ID" />
+      <button onclick="viewGroupMembers()">View Group Members</button>
+    </div>
+
+    <button class="logout-button" onclick="logout()">🚪 Logout</button>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

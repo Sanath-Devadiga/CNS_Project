@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: sans-serif;
     margin: 30px;
     background: #f4f4f4;
@@ -22,4 +22,78 @@ body {
     padding: 8px 16px;
     cursor: pointer;
   }
+   */
+
+
+   /* File: static/style.css */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.section {
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  margin-top: 20px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
   

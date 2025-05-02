@@ -15,14 +15,14 @@ class Member:
         cls._l = l
         cls._h = h
 
-    def __init__(self, id, name):
+    def __init__(self, id, name, password):
         self.id = id
         self.name = name
+        self.password = password  # 🔐 In real apps, hash this!
         self.secret_key = None
         self.group_id = None
         self.message_history = []
         print(f"Member {self.id} ({self.name}) created.")
-
 
     def set_group_id(self, group_id):
         self.group_id = group_id

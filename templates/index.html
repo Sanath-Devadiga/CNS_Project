@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Cryptography Project</title>
@@ -36,5 +36,102 @@
   </div>
 
   <script src="/static/scripts.js"></script>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cryptography Web App</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <h1>🔐 Cryptography Web App</h1>
+
+ 
+  <div class="section">
+    <h2>Create Member</h2>
+    <input id="member-name" placeholder="Name" />
+    <button onclick="createMember()">Create</button>
+  </div>
+
+  
+  <div class="section">
+    <h2>Create Group</h2>
+    <input id="group-name" placeholder="Group Name" />
+    <input id="group-admin" placeholder="Admin Member ID" />
+    <button onclick="createGroup()">Create</button>
+  </div>
+
+  
+  <div class="section">
+    <h2>Add Member to Group</h2>
+    <input id="admin-id" placeholder="Admin ID" />
+    <input id="member-id" placeholder="Target Member ID" />
+    <input id="group-id" placeholder="Group ID" />
+    <button onclick="addMember()">Add</button>
+  </div>
+
+ 
+  <div class="section">
+    <h2>Send Message</h2>
+    <input id="sender-id" placeholder="Sender ID" />
+    <input id="target-group" placeholder="Target Group ID" />
+    <input id="message" placeholder="Message text" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+ 
+  <div class="section">
+    <h2>Read Messages</h2>
+    <input id="reader-id" placeholder="Member ID" />
+    <button onclick="readMessages()">Read</button>
+    <ul id="messages"></ul>
+  </div>
+
+
+<div class="section">
+  <h2>🔍 View Data</h2>
+  <button onclick="viewMembers()">View Members</button>
+  <button onclick="viewGroups()">View Groups</button>
+  <input id="group-view-id" placeholder="Group ID to view members" />
+  <button onclick="viewGroupMembers()">View Group Members</button>
+</div>
+
+
+  <script src="/static/script.js"></script>
+</body>
+</html> -->
+
+
+
+<!-- File: templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto App - Welcome</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Welcome to Crypto App</h1>
+    <div class="form-container">
+      <h2>Sign Up</h2>
+      <input id="signup-name" placeholder="Name" />
+      <input id="signup-password" type="password" placeholder="Password" />
+      <button onclick="signUp()">Sign Up</button>
+    </div>
+    <div class="form-container">
+      <h2>Log In</h2>
+      <input id="login-name" placeholder="Name" />
+      <input id="login-password" type="password" placeholder="Password" />
+      <button onclick="logIn()">Log In</button>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
 </body>
 </html>
